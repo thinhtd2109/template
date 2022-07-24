@@ -1,0 +1,11 @@
+actions:
+  - name: getUsers
+    definition:
+      kind: ""
+      handler: http://host.docker.internal:3000
+custom_types:
+  enums: []
+  input_objects: []
+  objects:
+    - name: UserOutput
+  scalars: []

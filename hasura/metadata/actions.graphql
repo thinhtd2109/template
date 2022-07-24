@@ -1,0 +1,10 @@
+type Query {
+  getUsers: [UserOutput!]!
+}
+
+type UserOutput {
+  id: String
+  email: String
+  password: String
+}
+
