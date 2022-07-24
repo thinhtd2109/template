@@ -9,19 +9,18 @@ export class AppService {
     private jwtService: JwtService,
   ) {}
   async getHello() {
-    // const res = await this.requestService.query({
-    //   query: `
-    //     query getUsers {
-    //       results: users {
-    //         id
-    //         email
-    //         password
-    //       }
-    //     }
-    //   `
-    // })
-    // console.log(res.data.results)
-    // return res.data.results
-    return 'Hello World!';
+    const res = await this.requestService.query({
+      query: `
+        query getUsers {
+          results: users {
+            id
+            email
+            password
+          }
+        }
+      `,
+    });
+    console.log(res.data.results);
+    return res.data.results;
   }
 }

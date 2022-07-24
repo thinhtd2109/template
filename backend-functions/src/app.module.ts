@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { GraphqlModule } from './graphql/graphql.module';
 import { GraphqlService } from './graphql/graphql.service';
 import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -14,8 +15,9 @@ import { AuthModule } from './auth/auth.module';
       signOptions: { expiresIn: '60d' },
     }),
     AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService, GraphqlService],
+  providers: [AppService],
 })
 export class AppModule {}
